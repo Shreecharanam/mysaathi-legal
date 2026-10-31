@@ -35,9 +35,7 @@
   ul{margin:0 0 14px; padding-left:22px}
   li{margin-bottom:7px}
   a{color:var(--navy2)}
-  .meta{
-    display:flex; flex-wrap:wrap; gap:10px; margin-bottom:6px;
-  }
+  .meta{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:6px}
   .chip{
     background:var(--ivory); border:1px solid var(--line); border-radius:999px;
     padding:6px 14px; font-size:12.5px; color:var(--muted);
@@ -81,16 +79,18 @@
 
     <div class="callout">
       <b>In short:</b> MySaathi is a record-keeping app for coaching centres, gyms, clinics and
-      shops. Your data is stored on your phone and in your own secure cloud account so it can be
-      restored if you reinstall the App. We do not sell your data, we do not show advertisements,
-      and we do not collect your location, contacts or photos.
+      shops. Centres use it to manage students, attendance, fees and tests. Parents and students
+      can use it <b>free of charge</b> to view their own child's attendance, fees and marks when
+      their centre gives them access. Your data is stored on your phone and in your own secure
+      cloud account. <b>We show advertisements</b> (see section 5), we do not sell your data, and
+      we do not collect your location, contacts or photos.
     </div>
 
     <h2>1. Who we are</h2>
     <p>
       MySaathi is a software application developed and operated by Mukesh Sharma.
       For any question about this policy or your data, contact us using the details in
-      section 11.
+      section 13.
     </p>
 
     <h2>2. Information we collect</h2>
@@ -101,114 +101,164 @@
       <li>A unique account identifier created by our authentication provider</li>
     </ul>
 
-    <p><b>b) Centre profile information</b> — that you enter yourself:</p>
+    <p><b>b) Centre profile information</b> — that a centre enters itself:</p>
     <ul>
       <li>Centre name and business type (coaching, gym, shop, other)</li>
       <li>Optional: UPI ID, centre phone number, GSTIN, address</li>
     </ul>
 
-    <p><b>c) Records you create inside the App</b> — entered by you, about the people at your centre:</p>
+    <p><b>c) Records a centre creates inside the App</b> — about the people at that centre:</p>
     <table>
       <tr><th>Category</th><th>Examples</th></tr>
       <tr><td>People</td><td>Student/member/customer name, phone number, parent or guardian phone number, class, batch, join date</td></tr>
       <tr><td>Attendance</td><td>Dates on which a person was marked present</td></tr>
       <tr><td>Fees</td><td>Fee amount, fee period, amounts paid, pending amounts</td></tr>
       <tr><td>Tests</td><td>Test name, batch, maximum marks, marks obtained</td></tr>
-      <tr><td>Notes and bills</td><td>Short notes you add, and bills you create</td></tr>
+      <tr><td>Notes and bills</td><td>Short notes added by the centre, and bills it creates</td></tr>
     </table>
 
-    <p><b>d) Information we do NOT collect:</b></p>
+    <p><b>d) Information collected automatically by advertising</b>:</p>
     <ul>
-      <li>Your location (GPS)</li>
+      <li>A device advertising identifier (Android Advertising ID)</li>
+      <li>General device and app information used to serve ads (device model, operating system
+        version, approximate region, app version)</li>
+      <li>Ad interaction data (an ad was shown, tapped or closed)</li>
+    </ul>
+    <p>See section 5 for details about advertising.</p>
+
+    <p><b>e) Information we do NOT collect:</b></p>
+    <ul>
+      <li>Your precise location (GPS)</li>
       <li>Your device contacts, SMS or call logs</li>
       <li>Photos, camera or microphone content</li>
-      <li>Advertising identifiers</li>
       <li>Any data from other apps on your device</li>
     </ul>
 
     <h2>3. How your information is stored</h2>
     <ul>
       <li><b>On your device</b> — the App keeps a local copy of your data so it works offline.</li>
-      <li><b>In the cloud</b> — your data is also saved to Google Cloud Firestore (part of
-        Firebase), linked to your signed-in account, so that your records can be restored if you
-        change or reset your phone.</li>
+      <li><b>In the cloud</b> — centre records are also saved to Google Cloud Firestore (part of
+        Firebase), linked to the centre's signed-in account, so records can be restored if the
+        phone is changed or reset.</li>
     </ul>
     <p>
-      Cloud data is stored under your account. Other users of the App cannot see your data, and
-      you cannot see theirs.
+      Cloud data is stored under the centre's account. One centre cannot see another centre's
+      data. A parent can see a student's records only when that student's centre gives them
+      access (section 6).
     </p>
 
     <h2>4. Third-party services</h2>
     <p>We use the following services, which process data on our behalf:</p>
     <ul>
-      <li><b>Google Sign-In</b> — to let you sign in with your Google account</li>
+      <li><b>Google Sign-In</b> — to let a centre sign in with its Google account</li>
       <li><b>Firebase Authentication</b> — to manage sign-in and account security</li>
-      <li><b>Google Cloud Firestore</b> — to store and sync your records</li>
+      <li><b>Google Cloud Firestore</b> — to store and sync centre records</li>
+      <li><b>Google AdMob</b> — to display advertisements</li>
     </ul>
     <p>
       These services are provided by Google. Their handling of data is governed by Google's own
-      privacy policy. We do not share your records with any other third party.
+      privacy policy. We do not share centre records with any other third party.
     </p>
 
-    <h2>5. Why we use your information</h2>
+    <h2>5. Advertising</h2>
+    <p>
+      The App is free for parents and students, and is supported by advertisements shown through
+      <b>Google AdMob</b>. Advertisements are not shown on a centre's paid management screens.
+    </p>
+    <ul>
+      <li>Google and its partners may use the device advertising identifier to show ads,
+        including personalised ads based on your interests.</li>
+      <li>You can reset or delete your advertising ID, and opt out of personalised advertising,
+        at any time in your Android settings:
+        <i>Settings → Google → Ads</i> (or <i>Settings → Privacy → Ads</i>).</li>
+      <li>Opting out of personalised ads does not stop ads from being shown; it means the ads are
+        less relevant to you.</li>
+      <li>We do not give your name, phone number, email or centre records to advertisers. Ad
+        requests do not include that information.</li>
+    </ul>
+    <p>
+      For more information about how Google uses data in advertising, see Google's Privacy &amp;
+      Terms at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>.
+    </p>
+
+    <h2>6. Parent and guardian access</h2>
+    <p>
+      A centre may give a parent or guardian an <b>access code</b> for their child. With that
+      code, a parent can open the App and view, read-only:
+    </p>
+    <ul>
+      <li>their child's attendance record and attendance percentage</li>
+      <li>fees paid and fees pending</li>
+      <li>their child's batch or class</li>
+      <li>marks obtained in tests</li>
+    </ul>
+    <p>
+      A parent cannot change any of this information, and cannot see any other student's records
+      or the centre's other data. The centre controls whether access is given, and can withdraw
+      it at any time. Access codes are issued by the centre, not by us.
+    </p>
+
+    <h2>7. Why we use your information</h2>
     <ul>
       <li>To provide the App's features: student records, batches, attendance, fees, tests, reports</li>
-      <li>To keep your data safe and restore it when you reinstall the App</li>
-      <li>To let you share a report with a parent or guardian when <i>you</i> choose to</li>
-      <li>To respond to your support requests</li>
+      <li>To let a parent or guardian view their own child's progress when the centre allows it</li>
+      <li>To keep data safe and restore it when the App is reinstalled</li>
+      <li>To show advertisements that keep the App free for parents and students</li>
+      <li>To respond to support requests</li>
     </ul>
-    <p>We do not use your data for advertising, profiling or automated decision-making.</p>
+    <p>We do not use centre records for profiling or automated decision-making.</p>
 
-    <h2>6. Sharing and disclosure</h2>
+    <h2>8. Sharing and disclosure</h2>
     <ul>
       <li>We <b>do not sell</b> your data.</li>
-      <li>We <b>do not share</b> your data with advertisers or data brokers.</li>
+      <li>We <b>do not share</b> centre records with advertisers or data brokers.</li>
       <li>When you tap "Send on WhatsApp" or "Pay by UPI", the App opens those apps with content
         that <b>you</b> chose to send. That content then leaves the App and is handled by those
         apps under their own policies.</li>
       <li>We may disclose information if required by law or a valid legal request.</li>
     </ul>
 
-    <h2>7. Children's information</h2>
+    <h2>9. Children's information</h2>
     <p>
-      MySaathi is designed for centre owners and staff, who are adults. The App does not create
-      accounts for students.
+      The App does not create accounts for students. Centres, which are run by adults, enter and
+      manage student records.
     </p>
     <p>
-      However, a centre may enter records about students who are under 18 years of age (for
-      example, a name, class and attendance). In that case, the centre is the one responsible for
-      that data, and the centre must have the consent of the student's parent or guardian before
-      entering it. We do not knowingly collect information directly from children.
+      Because a centre may enter records about students under 18 years of age, the centre is
+      responsible for that data and must have the consent of the student's parent or guardian
+      before entering it and before giving parent access. We do not knowingly collect information
+      directly from children.
     </p>
 
-    <h2>8. Keeping and deleting your data</h2>
+    <h2>10. Keeping and deleting your data</h2>
     <ul>
-      <li>Your data stays in your account until you delete it.</li>
-      <li><b>Delete centre data:</b> in the App, open <i>Settings → Delete centre data</i>.</li>
-      <li><b>Delete your account:</b> in the App, open <i>Settings → Delete account</i>. This
-        removes your centre records from your device and from the cloud.</li>
+      <li>Centre records stay in the centre's account until the centre deletes them.</li>
+      <li><b>Delete centre data:</b> in the App, <i>Settings → Delete centre data</i>.</li>
+      <li><b>Delete account:</b> in the App, <i>Settings → Delete account</i>. This removes the
+        centre's records from the device and from the cloud.</li>
       <li>You may also email us at <a href="mailto:mysaathiapp@gmail.com">mysaathiapp@gmail.com</a>
         to request deletion, and we will act on it.</li>
     </ul>
 
-    <h2>9. Security</h2>
+    <h2>11. Security</h2>
     <p>
       Data sent between the App and our cloud services is encrypted in transit (HTTPS). Access to
-      your cloud records requires signing in to your account. We take reasonable steps to protect
-      your information, but no method of storage or transmission is completely secure, and we
-      cannot guarantee absolute security.
+      a centre's cloud records requires signing in to that centre's account. We take reasonable
+      steps to protect information, but no method of storage or transmission is completely secure,
+      and we cannot guarantee absolute security.
     </p>
 
-    <h2>10. Your rights</h2>
+    <h2>12. Your rights</h2>
     <p>You can, at any time:</p>
     <ul>
       <li>View and correct your data inside the App</li>
-      <li>Export your records (Settings → Export / Backup)</li>
+      <li>Export records (Settings → Export / Backup)</li>
       <li>Delete your data or your account</li>
+      <li>Reset your advertising ID or opt out of personalised ads in Android settings</li>
       <li>Contact us with any question or complaint about your data</li>
     </ul>
 
-    <h2>11. Contact us</h2>
+    <h2>13. Contact us</h2>
     <div class="contact">
       <div><b>MySaathi</b> — Mukesh Sharma</div>
       <div>Email: <a href="mailto:mysaathiapp@gmail.com">mysaathiapp@gmail.com</a></div>
@@ -216,7 +266,7 @@
       <div>Country: India</div>
     </div>
 
-    <h2>12. Changes to this policy</h2>
+    <h2>14. Changes to this policy</h2>
     <p>
       We may update this policy from time to time. When we do, we will change the
       "Last updated" date at the top of this page. If a change is significant, we will inform you
