@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get MySaathi</title>
+<style>
+  :root{
+    --navy:#12243A; --navy2:#1E3A5F; --ivory:#F7F3EA; --gold:#C8A96A;
+    --ink:#232323; --muted:#5F6672; --line:#E4DDCF;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ivory); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.7; font-size:15.5px;
+  }
+  header{
+    background:var(--navy); color:#fff; padding:40px 20px 34px;
+    border-bottom:3px solid var(--gold); text-align:center;
+  }
+  .logo{
+    width:72px; height:72px; margin:0 auto 14px; border-radius:20px;
+    background:linear-gradient(145deg,#1E3A5F,#12243A);
+    border:1px solid rgba(200,169,106,.45);
+    display:flex; align-items:center; justify-content:center;
+  }
+  header h1{margin:0; font-size:25px; letter-spacing:.2px}
+  header p{margin:8px 0 0; font-size:13.5px; color:#C3CFDE}
+  .wrap{max-width:640px; margin:0 auto; padding:26px 18px 70px}
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:24px; margin-bottom:16px; box-shadow:0 6px 20px rgba(0,0,0,.05);
+  }
+  h2{font-size:15px; margin:0 0 14px; color:var(--navy); text-transform:uppercase; letter-spacing:.6px}
+  .btn{
+    display:block; width:100%; text-align:center; text-decoration:none;
+    padding:15px 18px; border-radius:13px; font-weight:700; font-size:15.5px;
+    margin-bottom:10px;
+  }
+  .btn-primary{background:var(--navy); color:#fff}
+  .btn-primary:active{background:var(--navy2)}
+  .btn-ghost{background:#fff; color:var(--navy); border:1px solid var(--line)}
+  .btn-disabled{
+    background:#EFEFEF; color:#9AA0A6; border:1px solid #E2E2E2;
+    cursor:not-allowed;
+  }
+  .steps{margin:0; padding-left:20px; font-size:14.5px}
+  .steps li{margin-bottom:9px}
+  .code{
+    display:inline-block; background:var(--ivory); border:1px solid var(--line);
+    border-radius:8px; padding:2px 9px; font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:13.5px; letter-spacing:1px;
+  }
+  .note{font-size:13px; color:var(--muted); margin:10px 0 0}
+  .warn{
+    background:#FBF7EC; border:1px solid #EADFC3; border-left:4px solid var(--gold);
+    border-radius:10px; padding:13px 15px; font-size:14px;
+  }
+  footer{text-align:center; font-size:12.5px; color:var(--muted); padding:8px 16px 0}
+  footer a{color:var(--navy2)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C8A96A"
+         stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 10L12 5 2 10l10 5 10-5z"/>
+      <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/>
+    </svg>
+  </div>
+  <h1>MySaathi</h1>
+  <p>Centre management app — attendance, fees, marks</p>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>Get the app</h2>
+    <a class="btn btn-primary" href="https://github.com/Shreecharanam/mysaathi-app/releases/latest">
+      Download for Android
+    </a>
+    <a class="btn btn-ghost btn-disabled" href="#" aria-disabled="true">
+      Google Play — coming soon
+    </a>
+    <p class="note">
+      If the download does not start, ask your centre to share the MySaathi app file with you.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Have an access code?</h2>
+    <ol class="steps">
+      <li>Install the MySaathi app on your phone.</li>
+      <li>Open the app. On the first screen, tap
+        <b>"Parent? View your child record"</b>.</li>
+      <li>Enter the access code your centre sent you — for example
+        <span class="code">K7QP4M2X</span>.</li>
+      <li>Tap <b>View record</b>. You will see attendance, fees and test marks.</li>
+    </ol>
+    <p class="note">
+      The code is personal. Anyone who has it can view that student's record, so please do not
+      share it publicly.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>For centres</h2>
+    <p class="note" style="margin-top:0">
+      MySaathi helps coaching centres, gyms, clinics and shops keep student records, mark daily
+      attendance, track fees and dues, record test marks and send reports to parents.
+      One account manages one centre.
+    </p>
+    <p class="note">
+      For pricing and activation, contact
+      <a href="mailto:mysaathiapp@gmail.com">mysaathiapp@gmail.com</a>.
+    </p>
+  </div>
+
+  <div class="warn">
+    The app is free for parents and students. Centres pay a yearly subscription for the
+    management features.
+  </div>
+
+  <footer>
+    © 2026 Mukesh Sharma · MySaathi ·
+    <a href="./privacy.html">Privacy Policy</a>
+  </footer>
+</div>
+
+</body>
+</html>
