@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MySaathi — Download</title>
+<style>
+  :root{
+    --navy:#12243A; --navy2:#1E3A5F; --ivory:#F7F3EA; --gold:#C8A96A;
+    --ink:#232323; --muted:#5F6672; --line:#E4DDCF;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ivory); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:17px; line-height:1.7;
+  }
+  header{
+    background:var(--navy); color:#fff; padding:34px 20px 30px; text-align:center;
+    border-bottom:4px solid var(--gold);
+  }
+  .logo{
+    width:84px; height:84px; margin:0 auto 14px; border-radius:22px;
+    background:#0D1B2A; border:2px solid rgba(200,169,106,.6);
+    display:flex; align-items:center; justify-content:center;
+  }
+  header h1{margin:0; font-size:26px}
+  header p{margin:6px 0 0; font-size:14px; color:#C3CFDE}
+  .wrap{max-width:560px; margin:0 auto; padding:24px 16px 60px}
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    padding:24px; margin-bottom:16px; box-shadow:0 6px 20px rgba(0,0,0,.06);
+  }
+  .btn{
+    display:block; width:100%; text-align:center; text-decoration:none;
+    padding:20px 18px; border-radius:14px; font-weight:800; font-size:19px;
+    background:var(--navy); color:#fff; border:none;
+  }
+  .btn:active{background:var(--navy2)}
+  .btn.gold{background:var(--gold); color:#1A1206}
+  ol{margin:0; padding-left:24px}
+  ol li{margin-bottom:12px; font-size:16.5px}
+  .small{font-size:14px; color:var(--muted)}
+  .warn{
+    background:#FBF7EC; border:1px solid #EADFC3; border-left:5px solid var(--gold);
+    border-radius:12px; padding:14px 16px; font-size:15px; margin-top:14px;
+  }
+  .status{
+    margin-top:14px; font-size:15px; text-align:center; color:var(--muted);
+  }
+  footer{text-align:center; font-size:13px; color:var(--muted); padding:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#C8A96A"
+         stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 10L12 5 2 10l10 5 10-5z"/>
+      <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/>
+    </svg>
+  </div>
+  <h1>MySaathi</h1>
+  <p>App download kijiye</p>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <a class="btn gold" id="dl" href="#">⬇  Download App</a>
+    <div class="status" id="status">Download apne aap shuru ho raha hai…</div>
+  </div>
+
+  <div class="card">
+    <ol>
+      <li><b>Download</b> dabaiye</li>
+      <li>Download hone par upar ki <b>notification</b> se file kholiye</li>
+      <li><b>Install</b> dabaiye<br>
+        <span class="small">(agar "Allow from this source" poochhe to <b>Allow</b> kar dein)</span>
+      </li>
+      <li>App kholiye → <b>"Parent? View your child record"</b> → centre se mila <b>code</b> daaliye</li>
+    </ol>
+    <div class="warn">
+      Play Protect ne <b>"Unsafe app blocked"</b> dikhaya to
+      <b>More details → Install anyway</b> dabaiye. Ye app safe hai.
+    </div>
+  </div>
+
+  <footer>
+    MySaathi · free for parents · <a href="./privacy.html">Privacy Policy</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var APK = "https://github.com/Shreecharanam/mysaathi-app/releases/latest/download/mysaathi.apk";
+  var link = document.getElementById('dl');
+  var status = document.getElementById('status');
+  link.href = APK;
+
+  var started = false;
+  function startDownload() {
+    if (started) return;
+    started = true;
+    status.textContent = "Download shuru ho gaya. Notification bar mein dekhein.";
+    // trigger the download without leaving the page
+    var a = document.createElement('a');
+    a.href = APK;
+    a.download = 'mysaathi.apk';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  // auto-start shortly after the page opens
+  setTimeout(startDownload, 1200);
+
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    startDownload();
+  });
+})();
+</script>
+</body>
+</html>
